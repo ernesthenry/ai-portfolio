@@ -35,12 +35,20 @@ This repository (`ai-portfolio`) contains **20 production-grade modules** provin
 
 _JD: "LlamaIndex, LangChain, Vector Databases (Neo4j, Pinecone), Document Intelligence."_
 
+- **Enterprise Retrieval (`24_llamaindex_weaviate`):** Scalable ingestion pipeline using **LlamaIndex** + **Weaviate** for millions of documents.
 - **GraphRAG (`05_enterprise_ai_patterns/04_graph_rag_neo4j`):** Implemented a Knowledge Graph extraction engine using **Neo4j** to solve multi-hop reasoning where vector search fails.
 - **Multimodal RAG (`22_multimodal_rag_vision`):** Built a Vision-RAG pipeline to query **Charts and Images** using GPT-4o-Vision.
 - **Hybrid Search (`05_enterprise_ai_patterns/challenge_02_hybrid_search`):** Combined **BM25** (Keyword) + **ChromaDB** (Dense Vector) for superior recall.
 - **RAG from Scratch (`04_rag_from_scratch`):** Built retrieval utilizing raw NumPy cosine similarity to demonstrate deep understanding of vector math.
 
-### 2. Agentic AI & Orchestration
+### 2. Large Language Models (LLMs) & Alignment
+
+_JD: "Post training reinforcement (RLHF/DPO), Fine-tuning."_
+
+- **RLHF Alignment (`23_rlhf_dpo_alignment`):** Used **Direct Preference Optimization (DPO)** to align models with human values (Project: "Make the model polite").
+- **Cost Routing (`05_enterprise_ai_patterns/challenge_04_cost_router`):** Designed semantic routers to send queries to easier/cheaper models.
+
+### 3. Agentic AI & Orchestration
 
 _JD: "LLM-powered systems (chat agents), LangChain, LangGraph, Tool calling."_
 

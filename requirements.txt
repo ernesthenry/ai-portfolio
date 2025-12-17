@@ -1,2 +1,6 @@
 pyautogen
 
+weaviate-client
+unsloth
+trl
+
