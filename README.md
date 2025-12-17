@@ -1,4 +1,4 @@
-# Engineering Profile: [Kato Ernest Henry]
+# Engineering Profile: Kato Ernest Henry
 
 ## Lead AI Engineer | Full Stack ML Architect
 
