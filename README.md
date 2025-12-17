@@ -1,4 +1,4 @@
-# 👨‍💻 Engineering Profile: [Your Name]
+# 👨‍💻 Engineering Profile: [Kato Ernest Henry]
 
 ## Lead AI Engineer | Full Stack ML Architect
 
@@ -49,8 +49,18 @@ _I bridge the gap between Python and the World._
 - **Full Stack:** Built Async Streaming APIs (FastAPI) connected to Reactive Frontends (`18_full_stack_integration`).
 - **Latency Optimization:** Implemented Server-Sent Events (SSE) for perceived zero-latency UX (`01_fastapi_streaming`).
 
+## ⚡ 6. TypeScript & AI Engineering (OFoundation Match)
+
+_I speak the language of modern product engineering._
+
+- **LangChain.js & Zod:** Built strict, type-safe extraction agents using the Node.js ecosystem (`19_typescript_agentic_workflow`).
+- **Data Modeling:** Implemented schema validation for LLM outputs using Zod, mirroring the "Sovereign AI" product requirements.
+- **System Design:** Capable of designing end-to-end flows in both Python (Research/Training) and TypeScript (Production/Product).
+
 ---
 
 ### 💼 Value Proposition
 
 > "I am not just a Data Scientist who builds notebooks, nor just a Web Developer who calls APIs. I am an **AI Engineer** who builds the end-to-end infrastructure that turns Research into Revenue."
+
+- Contact me via email: henry38ernest@gmail.com
