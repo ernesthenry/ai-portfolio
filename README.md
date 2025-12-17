@@ -66,6 +66,7 @@ _Industry Standard: Scalable AI services, Docker, Benchmarking, Guardrails._
 - **Benchmarking Suite (`20_llm_benchmarking`):** Async load testing script to measure **P95 Latency** and **Throughput (TPS)** for capacity planning.
 - **MLOps Pipeline (`12_mlops_pipeline`):** Production safeguards including **Data Drift Detection** (KS-Tests) and a Model Registry.
 - **Safety Guardrails (`challenge_08_guardrails`):** Input/Output filtering to prevent PII leakage and Prompt Injection.
+- **Evaluation Framework (`27_evaluation_framework`):** Implemented **LLM-as-a-Judge** (Ragas) to grade RAG systems on Faithfulness and Relevance.
 - **Deployment (`16_deployment_ab_testing`):** Containerized FastAPI services (`Dockerfile`) and A/B Testing simulators.
 
 ### 4. Versatile "Polyglot" Engineering

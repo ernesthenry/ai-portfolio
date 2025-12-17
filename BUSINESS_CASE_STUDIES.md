@@ -63,11 +63,17 @@ _JD: "A data science pipeline right from data analysis... to deployment."_
 - **Solution:** Route simple queries to Llama-3, complex ones to GPT-4.
 - **Project:** `05_enterprise_ai_patterns/challenge_04_cost_router`.
 
+### 9. The Problem: "We deployed RAG, but users say it makes things up."
+
+- **Concept:** Automated Evaluation (LLM-as-a-Judge).
+- **Solution:** Use GPT-4 to grade Llama-3's answers for **Faithfulness** and **Relevance** before release.
+- **Project:** `27_evaluation_framework`.
+
 ---
 
 ## 📞 Call Center & Voice Automation
 
-### 9. The Problem: "Customers hate waiting on hold for 30 minutes."
+### 10. The Problem: "Customers hate waiting on hold for 30 minutes."
 
 - **Concept:** Real-Time Voice AI (STT/TTS).
 - **Solution:** Replace IVR ("Press 1") with a conversing AI Agent using Whisper and Neural TTS.
