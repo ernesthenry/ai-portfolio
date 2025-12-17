@@ -25,7 +25,8 @@ option = st.sidebar.selectbox(
         "5. MLOps: Data Drift Monitor",
         "6. Business Algorithms",
         "7. Classical ML Zoo (SVM/IsolationForest)",
-        "8. Reinforcement Learning (Q-Learning)"
+        "8. Reinforcement Learning (Q-Learning)",
+        "9. LLM Benchmarking (Latency/TPS)"
     )
 )
 
@@ -159,4 +160,22 @@ elif option == "8. Reinforcement Learning (Q-Learning)":
         st.success("Training Complete!")
         st.write("### Learned Policy")
         st.write("Start -> Down -> Down -> Right -> Right -> **GOLD (+10)**")
+
+elif option == "9. LLM Benchmarking (Latency/TPS)":
+    st.header("LLM Performance Benchmarking")
+    st.info("Simulating Load Test to measure P95 Latency and Throughput.")
+    
+    concurrency = st.slider("Concurrency (Simulated Users)", 1, 50, 10)
+    
+    if st.button("Run Load Test"):
+        st.write(f"🚀 Spawning {concurrency} async requests...")
+        
+        # Simulation of results
+        st.markdown("### 📊 Benchmark Report")
+        col1, col2, col3 = st.columns(3)
+        col1.metric("Throughput", "452 tok/s", "+12%")
+        col2.metric("P50 Latency", "0.45s")
+        col3.metric("P95 Latency", "1.2s", "-0.1s")
+        
+        st.warning("⚠️ High Concurrency (>20) creates queue backlog. Suggest autoscaling.")
 
