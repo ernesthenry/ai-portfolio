@@ -5,6 +5,13 @@
 **Contacts**: henry38ernest@gmail.com | [LinkedIn](https://www.linkedin.com/in/keh95/) | [GitHub](http://github.com/ernesthenry)
 
 > **"I bridge the gap between Research and Revenue."**
+
+### 💼 Value Proposition
+
+> "I am not just a Data Scientist who builds notebooks, nor just a Web Developer who calls APIs. I am an **AI Engineer** who builds the end-to-end infrastructure that turns Research into Revenue."
+
+**[➡️ Read my detailed Business Case Studies (ROI Analysis)](BUSINESS_CASE_STUDIES.md)**
+
 > I am a technical leader who has managed cross-functional teams (5+ members) to ship scalable AI products. My expertise allows me to architect complex systems (RAG, Agents, Knowledge Graphs) and guide teams through the entire lifecycle—from **mathematical first principles** to **production deployment** and **optimization**.
 
 ---
@@ -29,6 +36,7 @@ This repository (`ai-portfolio`) contains **20 production-grade modules** provin
 _JD: "LlamaIndex, LangChain, Vector Databases (Neo4j, Pinecone), Document Intelligence."_
 
 - **GraphRAG (`05_enterprise_ai_patterns/04_graph_rag_neo4j`):** Implemented a Knowledge Graph extraction engine using **Neo4j** to solve multi-hop reasoning where vector search fails.
+- **Multimodal RAG (`22_multimodal_rag_vision`):** Built a Vision-RAG pipeline to query **Charts and Images** using GPT-4o-Vision.
 - **Hybrid Search (`05_enterprise_ai_patterns/challenge_02_hybrid_search`):** Combined **BM25** (Keyword) + **ChromaDB** (Dense Vector) for superior recall.
 - **RAG from Scratch (`04_rag_from_scratch`):** Built retrieval utilizing raw NumPy cosine similarity to demonstrate deep understanding of vector math.
 
@@ -36,6 +44,7 @@ _JD: "LlamaIndex, LangChain, Vector Databases (Neo4j, Pinecone), Document Intell
 
 _JD: "LLM-powered systems (chat agents), LangChain, LangGraph, Tool calling."_
 
+- **AutoGen Swarm (`21_autogen_negotiation`):** Orchestrated a **Multi-Agent automated negotiation** between a Logistics Agent and a Supplier Agent (Real-world Business Case).
 - **LangGraph Implementation (`05_enterprise_ai_patterns/03_langgraph_agent`):** production-grade stateful agent workflow with cyclic graph logic.
 - **Multi-Agent Systems:** Designed "Newsroom" architecture where specialized agents (Researcher, Analyst, Writer) collaborate.
 - **Tool Use (`challenge_11_code_interpreter`):** Built a Code Interpreter agent that writes and executes Python to solve math problems.

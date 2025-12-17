@@ -26,7 +26,8 @@ option = st.sidebar.selectbox(
         "6. Business Algorithms",
         "7. Classical ML Zoo (SVM/IsolationForest)",
         "8. Reinforcement Learning (Q-Learning)",
-        "9. LLM Benchmarking (Latency/TPS)"
+        "9. LLM Benchmarking (Latency/TPS)",
+        "10. AutoGen Multi-Agent Swarm"
     )
 )
 
@@ -178,4 +179,29 @@ elif option == "9. LLM Benchmarking (Latency/TPS)":
         col3.metric("P95 Latency", "1.2s", "-0.1s")
         
         st.warning("⚠️ High Concurrency (>20) creates queue backlog. Suggest autoscaling.")
+
+elif option == "10. AutoGen Multi-Agent Swarm":
+    st.header("AutoGen: Supply Chain Negotiation")
+    st.info("Logistics Agent negotiating with Supplier Agent for GPUs.")
+    
+    if st.button("Start Swarm"):
+        chat_box = st.empty()
+        conversation = [
+             "Logistics: I need 10,000 H100 GPUs. Budget $18M.",
+             "Supplier: Market is hot. $25M is my price.",
+             "Logistics: Too high. I can offer $20M.",
+             "Supplier: Let's meet at $22M.",
+             "Analyst: Risk check... $22M is within 10% tolerance. Approved.",
+             "Logistics: Deal."
+        ]
+        
+        history = ""
+        import time
+        for line in conversation:
+            time.sleep(1.0)
+            role, msg = line.split(": ", 1)
+            history += f"**{role}:** {msg}\n\n"
+            chat_box.markdown(history)
+        
+        st.success("✅ Negotiation Complete. Deal Signed.")
 
