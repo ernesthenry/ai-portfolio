@@ -1,0 +1,28 @@
+# Model Configuration
+model_name: "gemma-2-27b-it" # Example 27B model (or substitute with any 20B+ model)
+new_model_name: "gemma-27b-finetuned"
+
+# LoRA Configuration (The tiny adapters)
+lora_r: 64 # Rank: Higher = more parameters to train, more VRAM
+lora_alpha: 16 # Scaling factor for LoRA
+lora_dropout: 0.1
+
+# 4-Bit Quantization Configuration
+use_4bit: true
+bnb_4bit_compute_dtype: "float16"
+bnb_4bit_quant_type: "nf4" # Normal Float 4 (optimized for weights)
+
+# Training Hyperparameters
+output_dir: "./results"
+num_train_epochs: 1
+per_device_train_batch_size: 4 # Keep low to save VRAM
+gradient_accumulation_steps: 4 # Simulate larger batch size
+learning_rate: 2.0e-4
+weight_decay: 0.001
+optimizer: "paged_adamw_32bit" # Special optimizer that offloads to CPU if GPU full
+max_grad_norm: 0.3
+warmup_ratio: 0.03
+lr_scheduler_type: "constant"
+
+# Dataset
+dataset_name: "timdettmers/openassistant-guanaco" # A standard Instruction dataset
