@@ -1,6 +1,6 @@
 # Problem 5: Structured Extraction Agent
 
-**JD Responsibility:** "Tool calling and chat agent architectures... Narrative analytics."
+
 
 **The Challenge:** Need to convert unstructured interviews into database rows without hallucinated formatting.
 

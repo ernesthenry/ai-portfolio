@@ -1,6 +1,6 @@
 # Multimodal RAG (Vision)
 
-**JD Alignment:** "Familiarity with... multimodal AI."
+
 
 **The Problem:**
 70% of enterprise knowledge is locked in **PDFs, Charts, and Screenshots**, which standard RAG (Text-only) ignores.

@@ -1,6 +1,6 @@
 # Post-Training Alignment (RLHF / DPO)
 
-**JD Alignment:** "Post training reinforcement."
+
 
 **The Business Problem:**
 Base LLMs are smart but **unaligned**. They might explain how to build a bomb or be rude to customers.

@@ -1,6 +1,6 @@
 # Problem 1: Hierarchical Summarization
 
-**JD Responsibility:** "Automated summarization and narrative analytics."
+
 
 **The Challenge:** Summarizing a 100-page document by stuffing it all into context is expensive and degrades performance ("Lost in the Middle").
 

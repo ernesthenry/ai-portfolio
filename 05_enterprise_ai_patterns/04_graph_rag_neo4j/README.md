@@ -1,6 +1,6 @@
 # Problem 3: GraphRAG
 
-**JD Responsibility:** "Knowledge graph integration... Neo4j."
+
 
 **The Challenge:** Vector search fails to retrieve "multi-hop" relationships (e.g., A knows B, B knows C -> Does A know C?).
 

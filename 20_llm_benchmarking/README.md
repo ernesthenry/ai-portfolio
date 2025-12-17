@@ -1,6 +1,6 @@
 # LLM Benchmarking & Optimization
 
-**JD Alignment:** "Establish and own the processes for benchmarking model performance, latency, and cost."
+
 
 ## The Goal
 

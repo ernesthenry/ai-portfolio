@@ -1,6 +1,6 @@
 # TypeScript AI Engineer (Node.js + LangChain.js)
 
-**JD Alignment:** "Deep proficiency in TypeScript", "Structured Data Modeling", "LLM Workflows".
+
 
 This project proves exact parity between my Python skills and the required TypeScript stack.
 

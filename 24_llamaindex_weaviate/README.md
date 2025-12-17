@@ -1,6 +1,6 @@
 # Enterprise Retrieval (LlamaIndex + Weaviate)
 
-**JD Alignment:** "LlamaIndex... Vector DBs like Weaviate, Pinecone... Data Indexing."
+
 
 **The Business Problem:**
 ChromaDB crashes when you have 10 Million PDF pages. You need a Distributed Vector Database.

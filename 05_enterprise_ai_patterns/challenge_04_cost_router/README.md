@@ -1,6 +1,6 @@
 # Problem 4: Model Routing & Cost Optimization
 
-**JD Responsibility:** "Identifying opportunities for optimization... Cost benchmarking."
+
 
 **The Challenge:** The system was routing simple "Hello" queries to GPT-4, wasting budget.
 

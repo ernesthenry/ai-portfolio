@@ -65,10 +65,26 @@ _JD: "A data science pipeline right from data analysis... to deployment."_
 
 ---
 
+## 📞 Call Center & Voice Automation
+
+### 9. The Problem: "Customers hate waiting on hold for 30 minutes."
+
+- **Concept:** Real-Time Voice AI (STT/TTS).
+- **Solution:** Replace IVR ("Press 1") with a conversing AI Agent using Whisper and Neural TTS.
+- **Project:** `25_voice_agent_stt_tts`.
+
+---
+
 ## 📉 Supply Chain & Operations
 
-### 9. The Problem: "Procurement negotiation takes weeks."
+### 10. The Problem: "Procurement negotiation takes weeks."
 
 - **Concept:** Multi-Agent Swarm (AutoGen).
 - **Solution:** Autonomous agents negotiating pricing within ZOPA limits.
 - **Project:** `21_autogen_negotiation`.
+
+### 11. The Problem: "Junior agents mishandle angry callers."
+
+- **Concept:** Role-Based Agent Teams (CrewAI).
+- **Solution:** A hierarchical AI team where a "QA Manager" agent reviews every response before it's spoken.
+- **Project:** `26_call_center_crewai`.

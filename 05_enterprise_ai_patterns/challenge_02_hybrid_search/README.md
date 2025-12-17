@@ -1,6 +1,6 @@
 # Problem 2: Hybrid Search & Evaluation
 
-**JD Responsibility:** "Benchmarking model performance... identifying opportunities for optimization."
+
 
 **The Challenge:** Users complained that specific queries (names, dates) returned irrelevant results despite high semantic similarity.
 
