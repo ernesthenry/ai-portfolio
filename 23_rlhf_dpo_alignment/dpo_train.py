@@ -9,15 +9,15 @@ from datasets import load_dataset
 
 def run_dpo_training():
     print("--- Starting DPO Alignment (Simulated) ---")
-    
+
     # 1. LOAD PRETRAINED MODEL (SFT Phase completed)
     model, tokenizer = FastLanguageModel.from_pretrained(
-        model_name = "unsloth/zephyr-sft", 
+        model_name = "unsloth/zephyr-sft",
         max_seq_length = 2048,
         dtype = None,
         load_in_4bit = True,
     )
-    
+
     # 2. LOAD PREFERENCE DATASET
     # Format: {prompt, chosen, rejected}
     # "Chosen": The polite/safe answer.
@@ -45,7 +45,7 @@ def run_dpo_training():
         max_length = 1024,
         max_prompt_length = 512,
     )
-    
+
     # 4. TRAINING (Mock for portfolio, requires GPU)
     print("Initializing Trainer... (GPU Required for full run)")
     # dpo_trainer.train()

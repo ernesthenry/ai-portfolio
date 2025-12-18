@@ -35,19 +35,19 @@ class MoELayer(nn.Module):
     def forward(self, x):
         # x shape: [batch_size, seq_len, d_model]
         batch_size, seq_len, d_model = x.shape
-        
+
         # Flatten inputs to [batch*seq, d_model] for processing
         x_flat = x.view(-1, d_model)
 
         # 1. Calculate Router Logits
         # shape: [batch*seq, num_experts]
         gate_logits = self.gate(x_flat)
-        
+
         # 2. Select Top-K Experts
         # weights: The probabilities (softmax)
         # indices: Which experts were chosen (0, 3, etc.)
         weights, indices = torch.topk(gate_logits, self.top_k, dim=-1)
-        
+
         # Normalize weights so they sum to 1 for the selected experts
         weights = F.softmax(weights, dim=-1)
 
@@ -61,27 +61,27 @@ class MoELayer(nn.Module):
             # Create a mask: "Is this expert (i) in the top_k indices for this token?"
             # shape: [batch*seq, top_k] -> boolean
             batch_mask = (indices == i)
-            
+
             # If this expert is used anywhere in the batch
             if batch_mask.any():
                 # We flatten the mask to find relevant tokens
                 # We sum across the top_k dimension to get a 1D mask for the batch
                 token_mask = batch_mask.any(dim=-1)
-                
+
                 # Extract tokens assigned to this expert
                 selected_tokens = x_flat[token_mask]
-                
+
                 # Pass through expert
                 expert_out = expert(selected_tokens)
-                
+
                 # We need to multiply by the router weight (Importance)
                 # Find which "rank" (1st choice, 2nd choice) this expert was
                 # This logic gets complex in pure PyTorch, simplified here:
                 weight_val = weights[batch_mask] # Extract specific weights
-                
+
                 # Reshape weight to match expert output [num_selected, 1]
                 weight_val = weight_val.view(-1, 1)
-                
+
                 # Add to final output
                 # We use index_add_ to put the values back into the correct rows
                 indices_to_add = torch.nonzero(token_mask).squeeze()

@@ -8,7 +8,7 @@ from unet import UNet
 
 def train():
     device = "cuda" if torch.cuda.is_available() else "cpu"
-    
+
     # 1. Setup Data
     transform = transforms.Compose([
         transforms.ToTensor(),
@@ -28,19 +28,19 @@ def train():
     for epoch in range(5):
         for i, (images, _) in enumerate(dataloader):
             images = images.to(device)
-            
+
             # A. Sample random timesteps
             t = diff.sample_timesteps(images.shape[0])
-            
+
             # B. Add noise to images
             x_t, noise = diff.noise_images(images, t)
-            
+
             # C. Predict the noise
             predicted_noise = model(x_t, t)
-            
+
             # D. Loss: Compare Actual Noise vs Predicted Noise
             loss = loss_fn(noise, predicted_noise)
-            
+
             optimizer.zero_grad()
             loss.backward()
             optimizer.step()

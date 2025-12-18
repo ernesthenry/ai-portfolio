@@ -11,7 +11,7 @@ class AgentState(TypedDict):
     analysis: str
     final_draft: str
     # 'operator.add' means: when a node returns 'messages', append them to the list
-    messages: Annotated[List[str], operator.add] 
+    messages: Annotated[List[str], operator.add]
 
 # 2. DEFINE AGENTS (NODES)
 llm = ChatOpenAI(model="gpt-3.5-turbo")
@@ -56,6 +56,6 @@ app = workflow.compile()
 if __name__ == "__main__":
     inputs = {"topic": "The impact of AI on Junior Developers in 2024"}
     result = app.invoke(inputs)
-    
+
     print("\n--- FINAL OUTPUT ---")
     print(result['final_draft'])

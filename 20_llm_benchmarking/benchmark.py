@@ -7,7 +7,7 @@ import numpy as np
 # In real life, this would call OpenAI/vLLM/TGI
 async def mock_llm_generation(tokens_to_gen: int):
     # Simulate: 30ms Time To First Token (TTFT), then 10ms per token
-    await asyncio.sleep(0.03) 
+    await asyncio.sleep(0.03)
     for _ in range(tokens_to_gen):
         await asyncio.sleep(0.01)
     return "token " * tokens_to_gen

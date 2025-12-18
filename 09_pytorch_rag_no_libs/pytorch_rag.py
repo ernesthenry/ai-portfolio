@@ -5,13 +5,13 @@ from transformers import AutoTokenizer, AutoModel
 class PyTorchRAG:
     def __init__(self, device="cpu"):
         self.device = device
-        
+
         # 1. THE ENCODER (MiniLM)
         # We use a pre-trained Transformer to turn text into tensors (embeddings)
         print("Loading Encoder...")
         self.tokenizer = AutoTokenizer.from_pretrained("sentence-transformers/all-MiniLM-L6-v2")
         self.encoder = AutoModel.from_pretrained("sentence-transformers/all-MiniLM-L6-v2").to(self.device)
-        
+
         # The Knowledge Base (Just a list of strings and a Tensor matrix)
         self.documents = []
         self.doc_embeddings = None
@@ -29,13 +29,13 @@ class PyTorchRAG:
         Converts a list of strings to a PyTorch Tensor [Batch_Size, 384]
         """
         encoded_input = self.tokenizer(text_list, padding=True, truncation=True, return_tensors='pt').to(self.device)
-        
+
         with torch.no_grad():
             model_output = self.encoder(**encoded_input)
-        
+
         # Pool the outputs into a single vector
         embeddings = self._mean_pooling(model_output, encoded_input['attention_mask'])
-        
+
         # Normalize embeddings (L2 Norm) so Dot Product equals Cosine Similarity
         embeddings = F.normalize(embeddings, p=2, dim=1)
         return embeddings
@@ -55,15 +55,15 @@ class PyTorchRAG:
         """
         # A. Embed Query
         query_emb = self.embed_text([query]) # Shape: [1, 384]
-        
+
         # B. Similarity Search (Dot Product)
         # [1, 384] x [384, N_Docs] = [1, N_Docs]
         scores = torch.matmul(query_emb, self.doc_embeddings.T)
-        
+
         # C. Top-K Retrieval
         # PyTorch has a built-in topk function
         top_scores, top_indices = torch.topk(scores, k=min(k, len(self.documents)))
-        
+
         results = []
         for score, idx in zip(top_scores[0], top_indices[0]):
             results.append({
@@ -78,7 +78,7 @@ class PyTorchRAG:
         """
         retrieved = self.retrieve(query)
         context = "\n".join([f"- {r['content']}" for r in retrieved])
-        
+
         # In a real PyTorch LLM project, you would pass this to a decoder model.
         # Here we demonstrate the Prompt Construction.
         prompt = f"""

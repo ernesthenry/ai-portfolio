@@ -13,7 +13,7 @@ class VectorDB:
         self.model = SentenceTransformer('all-MiniLM-L6-v2')
         self.chunk_size = 100 # Characters
         self.overlap = 20     # Characters
-        
+
         # Load and process data
         self.chunks = self._load_and_chunk(doc_file_path)
         self.db_matrix = self._build_index()
@@ -24,14 +24,14 @@ class VectorDB:
         """
         with open(path, 'r') as f:
             text = f.read().replace('\n', ' ')
-        
+
         chunks = []
         # Simple sliding window chunking
         for i in range(0, len(text), self.chunk_size - self.overlap):
             chunk = text[i:i + self.chunk_size]
             if len(chunk) > 50: # Discard tiny chunks (noise)
                 chunks.append(chunk)
-        
+
         print(f"Created {len(chunks)} text chunks.")
         return chunks
 
@@ -42,13 +42,13 @@ class VectorDB:
         """
         print("Vectorizing chunks...")
         embeddings = self.model.encode(self.chunks)
-        
+
         # L2 Normalization: v / ||v||
         # This ensures that the dot product is equivalent to Cosine Similarity.
         # It puts all vectors on the "surface of a hypersphere".
         norms = np.linalg.norm(embeddings, axis=1, keepdims=True)
         normalized_embeddings = embeddings / norms
-        
+
         return normalized_embeddings
 
     def search(self, query, top_k=3):

@@ -36,14 +36,14 @@ def run_inference():
     # Inference Loop
     def generate_response(prompt):
         inputs = tokenizer(prompt, return_tensors="pt").to("cuda" if torch.cuda.is_available() else "cpu")
-        
+
         with torch.no_grad():
             outputs = model.generate(
-                **inputs, 
-                max_new_tokens=100, 
+                **inputs,
+                max_new_tokens=100,
                 temperature=0.7
             )
-        
+
         print(f"\nPROMPT: {prompt}")
         print(f"RESPONSE: {tokenizer.decode(outputs[0], skip_special_tokens=True)}")
 

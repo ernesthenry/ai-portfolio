@@ -30,7 +30,7 @@ for epoch in range(2000):
     # Forward pass
     y_pred = model(X)
     loss = criterion(y_pred, y)
-    
+
     # Backward pass (The Learning)
     optimizer.zero_grad() # Clear old gradients
     loss.backward()       # Calculate new gradients

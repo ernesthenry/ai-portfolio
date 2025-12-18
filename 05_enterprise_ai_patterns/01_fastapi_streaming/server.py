@@ -29,7 +29,7 @@ async def mock_generator(prompt: str):
     """
     response_text = f"Analyzed request: '{prompt}'.\nHere is the streaming response:\n"
     tokens = response_text.split(" ") + ["This ", " is ", " a ", " simulated ", " stream ", " showing ", " FastAPI ", " capabilities."]
-    
+
     for token in tokens:
         yield token + " "
         await asyncio.sleep(0.1) # Simulate network/inference latency

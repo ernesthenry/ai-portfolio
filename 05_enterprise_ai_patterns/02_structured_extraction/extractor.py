@@ -14,7 +14,7 @@ class CustomerInsight(BaseModel):
     sentiment_score: int = Field(..., description="Score 1-10 of customer satisfaction")
     key_issues: List[str] = Field(..., description="Bullet points of complaints")
     action_required: bool = Field(..., description="True if a human must intervene")
-    
+
     # 2. VALIDATION LOGIC (Self-Correction)
     @field_validator('sentiment_score')
     def check_score_range(cls, v):
@@ -24,7 +24,7 @@ class CustomerInsight(BaseModel):
 
 def run_extraction_demo():
     print("--- STARTING ANALYST AGENT ---")
-    
+
     # Patching OpenAI client with Instructor to force Pydantic outputs
     client = instructor.from_openai(OpenAI())
 
@@ -47,13 +47,13 @@ def run_extraction_demo():
             ],
             max_retries=3,
         )
-        
+
         print("--- EXTRACTED JSON ---")
         print(insight.model_dump_json(indent=2))
-        
+
         if insight.action_required:
             print("\n🚨 ALERT: Ticket escalated to human support agent.")
-            
+
     except Exception as e:
         print(f"Extraction failed (Likely due to missing API Key in demo): {e}")
         # Mock output for portfolio display

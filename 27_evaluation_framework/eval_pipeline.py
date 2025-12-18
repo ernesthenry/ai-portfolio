@@ -13,7 +13,7 @@ from datasets import Dataset
 
 def run_evaluation():
     print("--- Starting RAG Evaluation (Ragas) ---")
-    
+
     # 1. PREPARE DATA
     # We need: Question, Truth, Context (Retrieved), Answer (Generated)
     data_samples = {

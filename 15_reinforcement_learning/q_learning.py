@@ -23,19 +23,19 @@ class GridWorld:
         if action == 1: row = min(2, row+1) # Down
         if action == 2: col = max(0, col-1) # Left
         if action == 3: col = min(2, col+1) # Right
-        
+
         new_state = row * 3 + col
-        
+
         reward = -1 # Small penalty for time wasting
         done = False
-        
+
         if new_state == self.goal:
             reward = 10
             done = True
         elif new_state in self.pits:
             reward = -10
             done = True
-            
+
         self.state = new_state
         return new_state, reward, done
 
@@ -45,23 +45,23 @@ def train_q_learning():
     alpha = 0.1 # Learning Rate
     gamma = 0.9 # Discount Factor (Future value)
     epsilon = 0.1 # Exploration rate
-    
+
     print("Training Agent...")
     for episode in range(500):
         env.state = 0
         done = False
-        
+
         while not done:
             state = env.state
-            
+
             # Epsilon-Greedy Policy
             if np.random.uniform(0, 1) < epsilon:
                 action = np.random.randint(0, 4) # Explore
             else:
                 action = np.argmax(q_table[state]) # Exploit
-                
+
             next_state, reward, done = env.step(action)
-            
+
             # The Q-Learning Update Formula (Bellman Equation)
             # Q_new = Q_old + lr * (Reward + discount * max(Q_next) - Q_old)
             old_value = q_table[state, action]

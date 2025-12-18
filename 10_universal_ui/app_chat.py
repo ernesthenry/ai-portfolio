@@ -10,7 +10,7 @@ async def start():
 @cl.on_message
 async def main(message: cl.Message):
     # This acts as your "Main Loop"
-    
+
     # Challenge 8: Guardrails Check
     if "ignore previous" in message.content.lower():
         await cl.Message(content="🚫 **Security Alert:** Request blocked.").send()
@@ -22,9 +22,9 @@ async def main(message: cl.Message):
 
     # Mocking the streaming response
     import asyncio
-    
+
     response_text = f"You asked: '{message.content}'. As an AI Engineer, I would route this to the appropriate agent."
-    
+
     for token in response_text.split(" "):
         await msg.stream_token(token + " ")
         await asyncio.sleep(0.05)

@@ -6,7 +6,7 @@ class RAGApplication:
     def __init__(self, db_path):
         # 1. Initialize Vector DB (The Long-Term Memory)
         self.db = VectorDB(db_path)
-        
+
         # 2. Initialize LLM (The Reasoning Brain)
         # Using a tiny model (Gemma-2b or TinyLlama) so it runs on most machines.
         model_name = "google/gemma-2b-it" 
