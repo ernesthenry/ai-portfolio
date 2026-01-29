@@ -33,7 +33,7 @@ This repository (`ai-portfolio`) contains **24 production-grade modules** demons
 
 ### 1. Advanced RAG & Knowledge Graphs
 
-_Industry Standard: LlamaIndex, LangChain, Vector Databases (Neo4j, Pinecone), Document Intelligence._
+Industry Standard: LlamaIndex, LangChain, Vector Databases (Neo4j, Pinecone), Document Intelligence._
 
 - **Enterprise Retrieval (`24_llamaindex_weaviate`):** Scalable ingestion pipeline using **LlamaIndex** + **Weaviate** for millions of documents.
 - **GraphRAG (`05_enterprise_ai_patterns/04_graph_rag_neo4j`):** Implemented a Knowledge Graph extraction engine using **Neo4j** to solve multi-hop reasoning where vector search fails.
@@ -43,7 +43,7 @@ _Industry Standard: LlamaIndex, LangChain, Vector Databases (Neo4j, Pinecone), D
 
 ### 2. Large Language Models (LLMs) & Alignment
 
-_Industry Standard: Post training reinforcement (RLHF/DPO), Fine-tuning._
+Industry Standard: Post training reinforcement (RLHF/DPO), Fine-tuning._
 
 - **RLHF Alignment (`23_rlhf_dpo_alignment`):** Used **Direct Preference Optimization (DPO)** to align models with human values (Project: "Make the model polite").
 - **Voice Agent (`25_voice_agent_stt_tts`):** Built a **Real-Time Voice Bot** pipeline (STT -> LLM -> TTS) for call center automation using Whisper and ElevenLabs-style synthesis.
@@ -51,7 +51,7 @@ _Industry Standard: Post training reinforcement (RLHF/DPO), Fine-tuning._
 
 ### 3. Agentic AI & Orchestration
 
-_Industry Standard: LLM-powered systems (chat agents), LangChain, LangGraph, Tool calling.
+Industry Standard: LLM-powered systems (chat agents), LangChain, LangGraph, Tool calling.
 
 - **AutoGen Swarm (`21_autogen_negotiation`):** Orchestrated a **Multi-Agent automated negotiation** between a Logistics Agent and a Supplier Agent (Real-world Business Case).
 - **CrewAI Call Center (`26_call_center_crewai`):** Built a multi-agent "Support Team" (Triage -> Tech -> QA) that processes inbound calls and drafts voice scripts.
@@ -61,7 +61,7 @@ _Industry Standard: LLM-powered systems (chat agents), LangChain, LangGraph, Too
 
 ### 3. Production Engineering & DevOps
 
-_Industry Standard: Scalable AI services, Docker, Benchmarking, Guardrails._
+Industry Standard: Scalable AI services, Docker, Benchmarking, Guardrails._
 
 - **Benchmarking Suite (`20_llm_benchmarking`):** Async load testing script to measure **P95 Latency** and **Throughput (TPS)** for capacity planning.
 - **MLOps Pipeline (`12_mlops_pipeline`):** Production safeguards including **Data Drift Detection** (KS-Tests) and a Model Registry.
