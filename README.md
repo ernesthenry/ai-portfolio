@@ -29,7 +29,7 @@ _Proven track record in technical leadership and process ownership._
 
 ## Technical Portfolio: Advanced AI Architecture
 
-This repository (`ai-portfolio`) contains **24 production-grade modules** demonstrating mastery of the modern AI technology stack.
+This repository (`ai-portfolio`) contains **24 production-grade modules** demonstrating my mastery of the modern AI technology stack.
 
 ### 1. Advanced RAG & Knowledge Graphs
 
@@ -51,7 +51,7 @@ _Industry Standard: Post training reinforcement (RLHF/DPO), Fine-tuning._
 
 ### 3. Agentic AI & Orchestration
 
-_Industry Standard: LLM-powered systems (chat agents), LangChain, LangGraph, Tool calling._
+_Industry Standard: LLM-powered systems (chat agents), LangChain, LangGraph, Tool calling.
 
 - **AutoGen Swarm (`21_autogen_negotiation`):** Orchestrated a **Multi-Agent automated negotiation** between a Logistics Agent and a Supplier Agent (Real-world Business Case).
 - **CrewAI Call Center (`26_call_center_crewai`):** Built a multi-agent "Support Team" (Triage -> Tech -> QA) that processes inbound calls and drafts voice scripts.
@@ -71,8 +71,6 @@ _Industry Standard: Scalable AI services, Docker, Benchmarking, Guardrails._
 
 ### 4. Versatile "Polyglot" Engineering
 
-_Definition: A Polyglot Architect is not restricted to one language (Python). They can deploy models to the browser (JS), mobile (Swift/Java), or backend (Go/Rust)._
-
 I choose the right tool for the job. I don't force everything into a Python notebook.
 
 - **Python (The Research Stack):** PyTorch, FastAPI, Pandas, Scikit-Learn.
@@ -81,7 +79,7 @@ I choose the right tool for the job. I don't force everything into a Python note
 
 ### 5. Mathematical Depth & "First Principles"
 
-_Industry Standard: Strong problem-solving, Embeddings, Tokenization._
+Industry Standard: Strong problem-solving, Embeddings, Tokenization._
 
 - **Transformers from Scratch (`01_transformer_from_scratch`):** Hand-coded Self-Attention and Positional Encoding.
 - **GenAI Architecture (`07_simple_diffusion`):** Implemented DDPM and U-Net architecture.
@@ -91,12 +89,10 @@ _Industry Standard: Strong problem-solving, Embeddings, Tokenization._
 
 ### The "Data Science Lifecycle" Map
 
-I have structured this portfolio to mirror the full lifecycle of an AI initiative:
-
 1.  **Problem ID & Math:** `08_pytorch_fundamentals`
 2.  **Data Engineering:** `11_data_science_pipeline`
 3.  **Model Dev:** `14_classical_ml_zoo` / `02_finetune_llm_qlora`
 4.  **System Arch:** `05_enterprise_ai_patterns`
 5.  **Production:** `12_mlops_pipeline`/ `20_llm_benchmarking`
 
-_Ready to lead the AI revolution._
+Ready to lead in the AI revolution.
