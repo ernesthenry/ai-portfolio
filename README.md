@@ -16,7 +16,7 @@
 
 ---
 
-## 🏆 Leadership & Management Strategy
+## Leadership & Management Strategy
 
 _Proven track record in technical leadership and process ownership._
 
